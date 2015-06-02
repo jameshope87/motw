@@ -15,13 +15,11 @@ def open_page():
 def find_section(page):
     start = page.find('<div class="motw">')
     end = page.find('</div>', start)
-    section = page[start:end]
+#    section = page[start:end]
     return start, end
 
-def pick_molecule(molecule_list):
-    molecule = random.choice(list(molecules.keys()))
-    description = molecules[molecule]
-    return molecule, description
+def pick_molecule(molecule_dict):
+    return  random.choice(list(molecule_dict.items()))
 
 def format_new(molecule, description):
     new_section = '<div class="motw">\n <h2> Below you will find my molecule of the week </h2>\n<h3>' + molecule + '</h3>\n<p>' + description + '</p>\n</div>'
