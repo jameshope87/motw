@@ -22,7 +22,7 @@ def pick_molecule(molecule_dict):
     return  random.choice(list(molecule_dict.items()))
 
 def format_new(molecule, description):
-    new_section = '<div class="motw">\n <h2> Below you will find my molecule of the week </h2>\n<h3>' + molecule + '</h3>\n<p>' + description + '</p>\n</div>'
+    new_section = '<div class="motw">\n <h2> Below you will find my molecule of the week </h2>\n<h3>' + molecule + '</h3>\n<p>' + description + '</p>\n'
     return new_section
     
 def make_new(molecule, description, page):
